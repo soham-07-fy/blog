@@ -1,6 +1,14 @@
 import Head from 'next/head';
 
 export default function Home() {
+  const dummyuser = {
+    username: "Soham",
+    userId: "22222",
+    title: "Title",
+    content: "Hi hello",
+    tags: "hashtag"
+  };
+
   return (
     <div className="min-h-screen bg-green-200 flex items-center justify-center">
       <Head>
@@ -13,32 +21,27 @@ export default function Home() {
           </div>
           <div className="ml-4 flex-1">
             <div className="bg-gray-200 p-2 rounded mb-2">
-              <p className="text-gray-700">Username</p>
+              <p className="text-gray-700">{dummyuser.username}</p>
             </div>
             <div className="bg-gray-200 p-2 rounded">
-              <p className="text-gray-700">User ID</p>
+              <p className="text-gray-700">{dummyuser.userId}</p>
             </div>
           </div>
         </div>
         <div className="mb-6">
-          <input
-            type="text"
-            placeholder="Title"
-            className="w-full p-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-stone-700"
-          />
+          <div className="p-4 border rounded-lg bg-white text-stone-700">
+            <p>{dummyuser.title}</p>
+          </div>
         </div>
         <div className="mb-4">
-          <textarea
-            placeholder="Content"
-            className="w-full p-4 h-40 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-stone-700"
-          />
+          <div className="p-4 h-40 border rounded-lg bg-white text-stone-700">
+            <p>{dummyuser.content}</p>
+          </div>
         </div>
         <div className="mb-0.5">
-          <input
-            type="text"
-            placeholder="Tags"
-            className="w-full p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-stone-700 mt-4"
-          />
+          <div className="p-3 border rounded-xl bg-white text-stone-700 mt-4">
+            <p>{dummyuser.tags}</p>
+          </div>
         </div>
       </div>
     </div>
